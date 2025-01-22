@@ -1,6 +1,8 @@
 ﻿#Requires AutoHotkey v2.0
-#Include %a_scriptdir%\..\lib\LibQurl.ahk
-#Include %a_scriptdir%\..\lib\Aris\packages.ahk
+MsgBox(a_scriptdir)
+ExitApp
+#Include C:\Users\phili\Documents\GitHub\2.Production\AutoHotkey Master\LibQurl\lib\LibQurl.ahk
+#Include C:\Users\phili\Documents\GitHub\2.Production\AutoHotkey Master\Aris\lib\Aris\packages.ahk
 SetWorkingDir(A_ScriptDir "\..")
 curl := LibQurl(A_WorkingDir "\bin\libcurl.dll")
 outMap := Map()

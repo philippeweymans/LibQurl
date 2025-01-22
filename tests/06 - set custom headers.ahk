@@ -1,8 +1,8 @@
 ﻿#Requires AutoHotkey v2.0
-#Include %a_scriptdir%\..\lib\LibQurl.ahk
-#Include %a_scriptdir%\..\lib\Aris\packages.ahk
+#Include C:\Users\phili\Documents\GitHub\2.Production\AutoHotkey Master\LibQurl\lib\LibQurl.ahk
+#Include C:\Users\phili\Documents\GitHub\2.Production\AutoHotkey Master\Aris\lib\Aris\packages.ahk
 SetWorkingDir(A_ScriptDir "\..")
-curl := LibQurl(A_WorkingDir "\bin\libcurl.dll")
+curl := LibQurl("C:\Users\phili\Documents\GitHub\2.Production\AutoHotkey Master\curl-8.11.1_3\bin\libcurl-x64.dll")
 
 curl.SetOpt("URL","https://httpbin.org/headers")
 curl.SetHeaders(Map("tidbit","is a header"

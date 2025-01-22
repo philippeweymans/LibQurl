@@ -1,6 +1,7 @@
 #requires Autohotkey v2.1-alpha.9
 #Include "*i <Aris\G33kDude\cJson>"
-#include "*i <Aris/SKAN/RunCMD>" ; SKAN/RunCMD@9a8392d
+#include C:\Users\phili\Documents\GitHub\2.Production\AutoHotkey Master\LibQurl\RunCMD.ahk
+
 class LibQurl {
     ;core functionality
     __New(dllPath?,requestedSSLprovider?) {
@@ -1241,13 +1242,13 @@ class LibQurl {
     ;     return NumGet(liPerformanceCount, 0, "Int64")
     ; }
     _findDLLfromAris(){ ;dynamically finds the dll from a versioned Aris installation
-        If !FileExist(A_ScriptDir "\lib\Aris\Qriist\LibQurl.ahk")
+        If !FileExist("C:\Users\phili\Documents\GitHub\2.Production\AutoHotkey Master\LibQurl\lib\LibQurl.ahk")
             return unset
         packageDir := A_ScriptDir "\lib\Aris\Qriist"
         loop files (packageDir "\LibQurl@*") , "D"{
             LQdir := packageDir "\" A_LoopFileName
         }
-        return LQdir "\bin\libcurl.dll"
+        return LQdir "C:\Users\phili\Documents\GitHub\2.Production\AutoHotkey Master\curl-8.11.1_3\lib\libcurl.dll"
     }
     
     ; _findDLLfromAris_hash(){ ;dynamically finds the dll from a versioned Aris installation

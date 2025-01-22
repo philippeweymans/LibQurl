@@ -1,7 +1,7 @@
 ﻿#Requires AutoHotkey v2.0
 ;a simple script to compile the raw files to a single distributable library file
 SetWorkingDir(A_ScriptDir)
-#Include <Aris\G33kDude\cJson>
+#Include C:\Users\phili\Documents\GitHub\2.Production\AutoHotkey Master\cJson.ahk
 vArr := JSON.load(FileOpen(A_ScriptDir "\releases\version.json","r").Read())
 pkgArr := JSON.load(FileOpen(A_ScriptDir "\package.json","r").Read())
 msg := "LibQurl's current version is: " versionString(vArr) "`n`n"
